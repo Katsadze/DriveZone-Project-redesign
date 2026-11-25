@@ -3,262 +3,402 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drive Zone</title>
+    <title>Drive Zone | Acessories Shop</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
 </head>
 <body>
 
-    <header class="header">
-      <nav class="navbar">
-        <a href="index.html" class="logo">
-            Drive Zone <span>.</span>
+   <header class="site-header">
+       <input type="checkbox" id="nav-check" class="nav-check" aria-label="toggle menu">
+       <div class="bar">
+        <a href="index.html" class="brand" aria-label="Drive Zone home">
+            <span class="brand-icon"><i class="fa-solid fa-car-side" aria-hidden="true"></i></span>
+            <span class="brand-name">Drive Zone</span>
         </a>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
+        <label for="nav-check" class="burger" aria-hidden="true"><i class="fa-solid fa-bars"></i></label>
 
-            <li class="dropdown">
-                <a href="categories.html">Categories</a>
+        <nav class="nav" aria-label="Main navigation">
+          <div class="has-dropdown">
+            <a href="shop.html" class="dd-toggle" aria-haspopup="true">Products <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></a>
 
-                <ul class="dropdown-menu">
-                    <li><a href="interior accessories.html">Interior Accessories</a></li>
-                    <li><a href="exterior accessories.html">Exterior Accessories</a></li>
-                    <li><a href="car-care.html">Car Care & Cleaning</a></li>
-                </ul>
-            </li>
-
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-         <div class="cart-logo">
-          <a class="cart-logo" href="cart.html">Cart</a>
-        <i class="fa-solid fa-cart-shopping"></i>
-         </div>
-        <!-- <a class="cart-logo" href="cart.html">Cart</a>
-        <i class="fa-solid fa-cart-shopping"></i> -->
-    </nav>
-
-    <div class="header-container">
-        <p class="tagline">LIGHT UP THE ROAD</p>
-
-        <h1>PREMIUM CAR<br>ACCESSORIES</h1>
-
-        <p class="sub">Now available Online & In Store</p>
-
-        <a class="header-button" href="shop.html">BUY NOW</a>
-    </div>
-    
-    </header>
-    <!-- <div class="header-container">
-        <p class="tagline"><strong>Light up the road</strong></p> 
-        <h1>PREMIUM CAR <br>ACCESSORIES</h1>
-        <p class="sub">Now available Online & In Store</p>
-        <button class="header-button">
-        <a class="aside-button" href="shop.html">BUY NOW</a>
-        </button>
-     </div>   -->
-    <main>
-     
-        <section class="hero">
-            
-            <div class="hero-content">
-              
-                <p class="hero-subtitle">WELCOME TO DRIVE ZONE</p>
-
-              <h1>POWER YOUR DRIVE</h1>
-
-              <p>Discover premium automotive accessories,
-                    modern car technology and essential equipment
-                    designed for every journey.
-              </p>
-
-              <a href="shop.html" class="main-button">SHOP NOW</a>
-            
+            <div class="dropdown">
+                        <a href="shop.html">All Products</a>
+                        <a href="interior accessories.html">Interior Accessories</a>
+                        <a href="exterior accessories.html">Exterior Accessories</a>
+                        <a href="car-care.html">Car Care &amp; Cleaning</a>
             </div>
-        </section>
+        </div>
 
-        <section class="featured section-container">
+        <a href="shop.html#sale">On Sale</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="nav-login"><i class="fa-solid fa-circle-user" aria-hidden="true"></i>Log in</a>
 
-            <div class="section-heading">
-             <p>OUR COLLECTION</p>
-             <h2>FEATURED PRODUCTS</h2>
-             <p>
-                 Discover our selection of popular automotive
-                    accessories and upgrade your driving experience.
-             </p>
+        <a href="cart.html" class="nav-cart" aria-label="Cart, 0 items"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i><span class="cart-count">0</span>
+         </a>
+     </nav>
+  </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="wrap hero-grid">
+            <div class="hero-card">
+                <p class="hero-kicker">Power up your drive</p>
+                <h1>Aurora LED Headlights</h1>
+                <p class="hero-sub">Now Available Online &amp; In Store</p>
+                <a href="shop.html" class="pill pill-white">Buy Now</a>
             </div>
 
-            <div class="product-container">
-                <article class="product-card">
-                    <div class="card-picture">
-                        <img src="3bc1852d99ac0162c87bb1adc136cc3b.jpg" alt="Car LED Headlights">
-                    </div>
-                    <h3>Premium LED Headlights</h3>
-                    <p>Bright and efficient lighting for your vehicle.</p>
-                    <span>$120.00</span>
-                    <a href="shop.html">VIEW PRODUCT</a>
+            <figure class="ph hero-poster"><img src="https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=731&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Sports car black background"></figure>
+        </div>
+    </section>
+
+    <section class="block-wrap" aria-labelledby="best-title">
+        <div class="block-head">
+            <h2 id="best-title">Best Sellers</h2>
+            <a href="shop.html" class="pill pill-white">View All</a>
+        </div>
+
+        <div class="carousel" tabindex="0" aria-label="Best sellers, scroll sideways for more">
+            <article class="p-card">
+                <a class="p-media" href="shop.html" aria-label="Aurora LED Headlight Kit">
+                    <figure class="ph"><img src="2407-hero-car-headlights.avif" alt="ports car with bright LED headlights" loading="lazy"></figure>
+                </a>
+                <h3>Aurora LED Headlights Kit</h3>
+                <p class="p-price">$120.00</p>
+                <a class="pill pill-accent" href="cart.html">Add to Cart</a>
+            </article>
+
+            <article class="p-card">
+                <a class="p-media" href="shop.html" aria-label="4K Smart Dash Camera">
+                   <figure class="ph"><img src="https://img.magnific.com/premium-photo/video-camera-attached-windshield-car-record-driving-prevent-danger-from-driving_11304-1843.jpg?semt=ais_hybrid&w=740&q=80" alt="4K Smart Dash Camera"></figure> 
+                </a>
+                <h3>4K Smart Dash Camera</h3>
+                    <p class="p-price">$229.00</p>
+                    <a class="pill pill-accent" href="cart.html">Add to Cart</a>
+            </article>
+
+            <article class="p-card">
+                    <a class="p-media" href="shop.html" aria-label="Sport Leather Seat Covers">
+                        <span class="badge">SALE</span>
+                    
+                <figure class="ph"><img src="https://image.made-in-china.com/2f0j00apsbyhPJEGgd/Latest-Design-a-Set-of-Car-Seat-Cover-Black-Sports-Style-Leather-Interior-Trims.webp" alt="Sport Leather Seat Covers" loading="lazy"> </figure>
+
+                </a>
+                    <h3>Sport Leather Seat Covers</h3>
+                    <p class="p-price"><s>$129.99</s> $116.99</p>
+                    <a class="pill pill-accent" href="cart.html">Add to Cart</a>
                 </article>
 
-                <article class="product-card">
-                    <div class="card-picture">
-                        <img src="mac-house-agency-project-mclarenxcamaro-camaro-front-600x400.jpg" alt="Modern Car">
-                    </div>
-                    <h3>4K Smart Dash Camera</h3>
-                    <p>Record your journeys in high definition.</p>
-                    <span>$229.00</span>
-                    <a href="shop.html">VIEW PRODUCT</a>
-
-                </article>
-
-                <article class="product-card">
-                    <div class="card-picture">
-                        <img src="https://c4.wallpaperflare.com/wallpaper/744/723/582/nissan-r35-gt-r-washing-car-spray-wallpaper-preview.jpg" alt="Car Cleaning">
-                    </div>
-                    <h3>Ultimate Car Care Kit</h3>
-                    <p>Everything you need to keep your car clean.</p>
-                    <span>$49.99</span>
-                    <a href="shop.html">VIEW PRODUCT</a>
-
-                </article>
-
-                <article class="product-card">
-                    <div class="card-picture">
-                        <img src="magsafe-car-vent-mount-iphone-guide.webp" alt="Wireless car charger">
-                    </div>
+                <article class="p-card">
+                    <a class="p-media" href="shop.html" aria-label="Wireless Car Charger">
+                        <figure class="ph"><img src="https://m.media-amazon.com/images/I/71bEEfWMDUL._AC_UF894,1000_QL80_.jpg" alt="Phone charging on a magnetic mount on a car dashboard" loading="lazy"></figure>
+                    </a>
                     <h3>Wireless Car Charger</h3>
-                    <p>Convenient charging while you drive.</p>
-                    <span>$34.99</span>
-                    <a href="shop.html">VIEW PRODUCT</a>
+                    <p class="p-price">$34.99</p>
+                    <a class="pill pill-accent" href="cart.html">Add to Cart</a>
+                </article>
 
+                <article class="p-card">
+                    <a class="p-media" href="shop.html" aria-label="Ultimate Car Care Kit">
+                        <figure class="ph"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwiOwabXL8HOn2tslvgdouiTkp00Tse93LB2PAuX9k3vOjKT0785lf41Y&s=10" alt="Ultimate Car Care Kit wallpaper"></figure>
+                        </a>
+                    <h3>Ultimate Car Care Kit</h3>
+                    <p class="p-price">$49.99</p>
+                    <a class="pill pill-accent" href="cart.html">Add to Cart</a>
+                </article>
+
+                <article class="p-card">
+                    <a class="p-media" href="shop.html" aria-label="Carbon Fiber Steering Wheel Cover">
+                        <figure class="ph"><img src="https://m.media-amazon.com/images/I/61Uax8sNtGL._AC_UF894,1000_QL80_.jpg" alt="Carbon Fiber Steering Wheel Cover"></figure>
+                        </a>
+                    <h3>Carbon Fiber Steering Wheel Cover</h3>
+                    <p class="p-price">$24.99</p>
+                    <a class="pill pill-accent" href="cart.html">Add to Cart</a>
                 </article>
             </div>
         </section>
 
-        <section class="promo">
+        <section class="categories" aria-labelledby="cat-title">
+            <div class="wrap">
+                <h2 id="cat-title">Shop by Category</h2>
+                <div class="cat-grid">
 
-            <div class="promo-content">
+                    <a class="cat-card" href="interior accessories.html">
+                        <figure class="ph"><img src="https://theocdplug.com/cdn/shop/products/dash-mount-picture-4_b9c95ae0-0ebe-4a73-a706-56b1509e3f00.jpg?v=1705518169&width=1214" alt="Car interior with a phone on a dashboard mount" loading="lazy"></figure>
+                        <span>Interior Accessories</span>
+                    </a>
 
-                <p>DRIVE IN STYLE</p>
+                    <a class="cat-card" href="exterior accessories.html">
+                        <figure class="ph"><img src="C__72681.webp" alt="Pickup truck with roof lights and off-road bumper" loading="lazy"></figure>
+                        <span>Exterior Accessories</span>
+                    </a>
 
-                <h2>MAKE EVERY DRIVE DIFFERENT</h2>
-
-                <p>
-                    Find the right accessories to make your
-                    vehicle more comfortable, stylish and practical.
-                </p>
-
-                <a href="categories.html" class="main-button">EXPLORE CATEGORIES</a>
-
+                    <a class="cat-card" href="car-care.html">
+                        <figure class="ph"><img src="https://media.base44.com/images/public/6a76389909c643709585dd1f/f1b9e2a09_how-often-to-wash-and-wax-car-michigan.jpg" alt="Car cleaning" loading="lazy"></figure>
+                        <span>Car Care &amp; Cleaning</span>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section class="categories section-container">
-            
-            <div class="section-heading">
-                <p>EXPLORE OUR STORE</p>
-                <h2>SHOP BY CATEGORY</h2>
-                <p>
-                    Find everything your vehicle needs
-                    in one place.
-                </p>
+        <section class="deals">
+            <div class="wrap deals-grid">
+                <div class="deal-card">
+                    <p class="deal-kicker">This week`s deals</p>
+                    <p class="deal-big">10%</p>
+                    <p class="deal-text">off all acessories</p>
+                    <a href="shop.html#sale" class="pill pill-white">Shop Now</a>
+                </div>
+
+                <div class="fan-stack" aria-hidden="false">
+                    <figure class="ph fan fan-1"><img src="https://i.pinimg.com/736x/76/9d/a4/769da4c1f4d7704fe8c4b817a778616a.jpg" alt="black luxury car Interior cabin" loading="lazy"></figure>
+
+                    <figure class="ph fan fan-2"><img src="https://i.pinimg.com/736x/15/df/6a/15df6ada486d69795982d1d8e1b55d9f.jpg" alt="car brake disk" loading="lazy"></figure>
+
+                    <figure class="ph fan fan-3"><img src="https://i.pinimg.com/1200x/e7/1c/35/e71c3596de1cfcfb9a46b06c982effa2.jpg" alt="car quick detailer" loading="lazy"></figure>
+                </div>
             </div>
-
-            <div class="category-container">
-                <article class="category-card">
-                    <img src="https://wallpapers.com/images/hd/2020-mercedes-benz-car-interior-aodyfzl7a2ivcoa3.jpg" alt="Car interior">
-                    <h3>Interior Accessories</h3>
-                    <p>Comfort and style for your car interior.</p>
-                    <a href="interior accessories.html">EXPLORE</a>
-                </article>
-
-                <article class="category-card">
-                    <img src="https://i.pinimg.com/736x/ed/a5/c7/eda5c79521da0100a104714c3677a0c1.jpg" alt="">
-                    <h3>Exterior Accessories</h3>
-                    <p>Give your vehicle a unique appearance.</p>
-                    <a href="exterior accessories.html">EXPLORE</a>
-
-                </article>
-
-                <article class="category-card">
-                    <img src="https://images.pexels.com/photos/20042048/pexels-photo-20042048/free-photo-of-sprays-and-cloths-on-table-near-sports-cars.jpeg" alt="Car C">
-                    <h3>Car Care & Cleaning</h3>
-                    <p>Keep your vehicle looking its best.</p>
-                    <a href="car-care.html">EXPLORE</a>
-
-                </article>
-            
-            </div>
-
         </section>
 
-        <section class="newsletter" id="newsletter">
-            <h2>STAY IN THE DRIVER`S SEAT</h2>
+        <section class="block-wrap" aria-labelledby="upgrade-title">
+            <div class="block-head">
+                <h2 id="upgrade-title">Upgrade Your Gear</h2>
+                <a href="shop.html" class="pill pill-white">View All</a>
+            </div>
+            <div class="carousel" tabindex="0" aria-label="Upgrade your gear, scroll sideways for more">
+                <article class="p-card">
+                    <a class="p-media" href="shop.html" aria-label="Portable Jump Starter">
+                        <span class="badge">SALE</span>
+                        <figure class="ph"><img src="https://i.pinimg.com/736x/bd/f8/eb/bdf8ebc39f84f20388f08022f0abc8ed.jpg" alt="Portable Jump Starter"></figure>
+                    </a>
+                    <h3>Portable Jump Starter</h3>
+                    <p class="p-price"><s>29.99</s>26.99</p>
+                    <a class="pill pill-accent" href="cart.html">Add to Cart</a>
+                </article>
 
-            <p>
-                Subscribe to receive updates about new products
-                and special offers.
-            </p>
+                <article class="p-card">
+                    <a class="p-media" href="shop.html" aria-label="Digital Tire Pressure Gauge">
 
-            <form action="">
-                <input type="email"
-                placeholder="Enter your email address" required>
-                <button type="submit">SUBSCRIBE</button>
-            </form>
+                        <figure class="ph"><img src="https://i.pinimg.com/1200x/79/1a/af/791aaff7dbad392e1cec611176bc4a56.jpg" alt="Digital Tire Pressure Gauge"></figure>
+                    </a>
+
+                    <h3>Digital Tire Pressure Gauge</h3>
+                    <p class="p-price">$39.99</p>
+                    <a class="pill pill-accent" href="cart.html">Add to Cart</a>
+                </article>
+
+                <article class="p-card">
+                    <a class="p-media" href="shop.html" aria-label="All-Weather Floor Mate">
+
+                        <figure class="ph"><img src="https://i.pinimg.com/1200x/bb/50/ca/bb50ca3346988b3e1c0381709df2f92b.jpg" alt="All-Weather Floor Mats"></figure>
+                         <h3>All-Weather Floor Mats</h3>
+                    <p class="p-price">$159.99</p>
+                    <a class="pill pill-accent" href="cart.html">Add to Cart</a>
+                </article>
+
+                <article class="p-card">
+                    <a class="p-media" href="shop.html" aria-label="Magnetic Phone Mount">
+                        <span class="badge">SALE</span>
+
+                        <figure class="ph"><img src="https://i.pinimg.com/736x/48/d2/88/48d2887d9bd79385c27a38ca2c7ed123.jpg" alt="Magnetic Phone Mount"></figure>
+                    </a>
+                    <h3>Magnetic Phone Mount</h3>
+                    <p class="p-price"><s>$129.99</s> $116.99</p>
+                    <a class="pill pill-accent" href="cart.html">Add to Cart</a>
+                </article>
+
+                <article class="p-card">
+                    <a class="p-media" href="shop.html" aria-label="Ambient Interior LED Strip">
+                        <figure class="ph"><img src="https://i.pinimg.com/1200x/e7/a9/7b/e7a97b69a88c2cbd90ce847b2707261b.jpg" alt="Ambient Interior LED Strip"></figure>
+                    </a>
+                    <h3>Ambient Interior LED Strip</h3>
+                    <p class="p-price">$19.99</p>
+                    <a class="pill pill-accent" href="cart.html">Add to Cart</a>
+                </article>
+
+                <article class="p-card">
+                    <a class="p-media" href="shop.html" aria-label="Roof Cargo Carrier">
+                        <figure class="ph"><img src="https://i.pinimg.com/736x/1c/93/b3/1c93b35673e55ae482cfee65fbae9509.jpg" alt="Roof Cargo Carrier"></figure>
+                    </a>
+                    <h3>Roof Cargo Carrier</h3>
+                    <p class="p-price">$189.00</p>
+                    <a class="pill pill-accent" href="cart.html">Add to Cart</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="block-wrap" aria-labelledby="trend-title">
+            <div class="block-head">
+                <h2 id="trend-title">Trending Now</h2>
+                <a href="shop.html" class="pill pill-white">View All</a>
+            </div>
+
+            <div class="carousel" tabindex="0" aria-label="Trending now, scroll sideways for more">
+                <article class="p-card">
+                    <a class="p-media" href="shop.html" aria-label="Panoramic Rear-View Mirror">
+                        <figure class="ph"><img src="https://i.pinimg.com/1200x/d2/ee/4a/d2ee4a4a9e60e254a1e054eb63f8ceac.jpg" alt="Panoramic Rear-View Mirror"></figure>
+                    </a>
+                    <h3>Panoramic Rear-View Mirror</h3>
+                    <p class="p-price"><s>$39.99</s> $35.99</p>
+                    <a class="pill pill-accent" href="cart.html">Add to Cart</a>
+                </article>
+
+                 <article class="p-card">
+                    <a class="p-media" href="shop.html" aria-label="Ceramic Coating Spray">
+                        <span class="badge">SALE</span>
+                        <figure class="ph"><img src="https://i.pinimg.com/1200x/56/66/3a/56663a1f98c1db5866342131f53b3afc.jpg" alt="Ceramic Coating Spray"></figure>
+                    </a>
+                    <h3>Ceramic Coating Spray</h3>
+                    <p class="p-price"><s>$39.99</s> $35.99</p>
+                    <a class="pill pill-accent" href="cart.html">Add to Cart</a>
+                    </article>
+
+                  <article class="p-card">
+                    <a class="p-media" href="shop.html" aria-label="Compact Air Compressor">
+                        <span class="badge">SALE</span>
+                        <figure class="ph"><img src="https://i.pinimg.com/736x/a5/8b/a8/a58ba85a0211f48fa46bb227b56f1788.jpg" alt="Compact Air Compressor"></figure>
+                    </a>
+                    <h3>Compact Air Compressor</h3>
+                    <p class="p-price"><s>$39.99</s> $35.99</p>
+                    <a class="pill pill-accent" href="cart.html">Add to Cart</a>
+                  </article>
+
+                  <article class="p-card">
+                    <a class="p-media" href="shop.html" aria-label="Premium Microfiber Towel Set">
+                        <figure class="ph"><img src="https://i.pinimg.com/1200x/dc/21/c8/dc21c869a20737bdbb2159ee332e61d1.jpg" alt="Premium Microfiber Towel Set"></figure>
+                    </a>
+                    <h3>Premium Microfiber Towel Set</h3>
+                    <p class="p-price">$39.99</p>
+                    <a class="pill pill-accent" href="cart.html">Add to Cart</a>
+                  </article>
+
+                  <article class="p-card">
+                    <a class="p-media" href="shop.html" aria-label="Car Vacuum Cleaner">
+                        <figure class="ph"><img src="https://i.pinimg.com/736x/48/30/8a/48308a0198234abb0239afb6929f7add.jpg" alt="Car Vacuum Cleaner"></figure>
+                    </a>
+                    <h3>Car Vacuum Cleaner</h3>
+                    <p class="p-price">$59.99</p>
+                    <a class="pill pill-accent" href="cart.html">Add to Cart</a>
+                  </article>
+
+                  <article class="p-card">
+                    <a class="p-media" href="shop.html" aria-label="Seat Gap Organizer">
+                        <figure class="ph"><img src="https://i.pinimg.com/736x/8d/5d/b3/8d5db3849868de5154393814286f3107.jpg" alt="Seat Gap Organizer"></figure>
+                    </a>
+                    </a>
+                    <h3>Seat Gap Organizer</h3>
+                    <p class="p-price">$14.99</p>
+                    <a class="pill pill-accent" href="cart.html">Add to Cart</a>
+               </div>
+          </section>
+
+          <section class="newsletter" id="newsletter">
+            <div class="newsletter-top">
+                <h2>News letter</h2>
+                <p>Sign up to receive updates on new<br>products and special offers</p>
+
+                <form class="nl-form" action="" method="post">
+                    <label for="nl-email">Email *</label>
+                    <input type="email" id="n1-email" name="email" required autocomplete="email">
+                    <div class="nl-row">
+                        <label class="nl-check" for="">
+                            <input type="checkbox" name="subscribe" checked>
+                            <span>Yes, subscribe me to your newsletter.</span>
+                        </label>
+                        <button type="submit" class="pill pill-white">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="newsletter-bottom">
+                <div class="tilt-row">
+                    <figure class="ph tilt"><img src="https://i.pinimg.com/1200x/ee/1c/e7/ee1ce7432b9ad554d2b504c5087e5137.jpg" alt="Car accessories interior" loading="lazy"></figure>
+                    <figure class="ph tilt"><img src="https://i.pinimg.com/736x/6d/26/47/6d264763f75c3765bf783ed4e1831b39.jpg" alt="car gab box"></figure>
+                    <figure class="ph tilt"><img src="https://i.pinimg.com/736x/75/69/fe/7569fec0bc7b117c9be485c427c5a5e2.jpg" alt="car rear box"></figure>
+                    <figure class="ph tilt"><img src="https://i.pinimg.com/736x/cf/14/9a/cf149aec333a9bf392113b531a05390d.jpg" alt="trunk organizer"></figure>
+                    <figure class="ph tilt"><img src="https://i.pinimg.com/1200x/e2/55/cd/e255cd024fb443783359d080dc650b0e.jpg" alt="car galaxy ceiling"></figure>
+                    <figure class="ph tilt"><img src="https://i.pinimg.com/1200x/05/96/d5/0596d55b1c205055443361f987ed1f0d.jpg" alt="car air freshener"></figure>
+                </div>
+            </div>
         </section>
     </main>
 
+
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-about">
-             <h2>DRIVEZONE <span>.</span></h2>
-                <p>BUILT FOR THE ROAD.</p>
-
-                <p>
-                    Automotive accessories and equipment
-                    for every journey.
-                </p>
+        <div class="wrap footer-grid">
+            <div class="footer-brand">
+                <span class="brand-icon big"><i class="fa-solid fa-car-side" aria-hidden="true"></i></span>
+                <span class="brand-name">Drive Zone</span>
             </div>
 
-            <div class="footer-links">
-             <h3>SHOP</h3>
-             <a href="shop.html">All products</a>
-             <a href="interior accessories.html">Interior Accessories</a>
-             <a href="exterior accessories.html">Exterior Accessories</a>
-             <a href="car-care.html">Car-Care</a>
-             
-            </div>
-            <div class="footer-links">
-                <a href="contact.html">Contact</a>
-                <a href="about.html">About Us</a>
-                <a href="cart.html">Shooping Cart</a>
+            <nav class="f-col" aria-label="Products">
+                <h3>Products</h3>
+                <a href="shop.html">All Products</a>
+                <a href="interior accessories.html">Interior Accessories</a>
+                <a href="exterior accessories.html">Exterior Accessories</a>
+                <a href="car-care.html">Car Care &amp; Cleaning</a>
+            </nav>
+
+            <div class="f-col">
+                 <h3>Store</h3>
+                <p>123 Your Street Name<br>City, Country</p>
+                <p>Mon - Fri: 9am - 9pm</p>
+                <p><a href="mailto:info@example.com">info@example.com</a></p>
+                <p><a href="tel:+0000000000">000-000-0000</a></p>
             </div>
 
-            <div class="footer-links">
-                <h3>POLICY</h3>
-
-                <a href="terms.html">Terms & Conditions </a>
+            <nav class="f-col" aria-label="Policy">
+                <h3>Policy</h3>
+                <a href="terms.html">Terms &amp; Conditions</a>
                 <a href="shipping.html">Shipping Policy</a>
                 <a href="refund.html">Refund Policy</a>
                 <a href="privacy.html">Privacy Policy</a>
+                <a href="cookies.html">Cookie Policy</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+        </div>
+
+        <div class="wrap footer-lower">
+            <div class="payments">
+               <h3>Payment Methods</h3>
+                <p aria-label="Accepted cards: Visa, Mastercard, American Express, Discover, PayPal">
+                    <i class="fa-brands fa-cc-visa" aria-hidden="true"></i>
+                    <i class="fa-brands fa-cc-mastercard" aria-hidden="true"></i>
+                    <i class="fa-brands fa-cc-amex" aria-hidden="true"></i>
+                    <i class="fa-brands fa-cc-jcb" aria-hidden="true"></i>
+                    <i class="fa-brands fa-cc-discover" aria-hidden="true"></i>
+                    <i class="fa-brands fa-cc-diners-club" aria-hidden="true"></i>
+                    <i class="fa-brands fa-cc-paypal" aria-hidden="true"></i>
+                </p> 
+            </div>
+
+            <div class="community">
+                <h3>Join the Community</h3>
+                <p>
+                    <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                    
+                    <a href="https://www.instagram.com/?hl=en" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    
+                    <a href="https://www.youtube.com/" aria-label="Youtube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+                    
+                    <a href="https://www.tiktok.com/en/" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                </p>
             </div>
         </div>
 
-        <div class="footer-bottom">
-            <p>© 2026 DRIVEZONE. All Rights Reserved.</p>
-
-        </div>
-
+        <p class="copyright">© 2026 by Drive Zone. All rights reserved.</p>
     </footer>
- 
 
-
-
-
-
-
-
+    <a href="contact.html" class="chat-btn" aria-label="Contact us"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i></a>
 
 </body>
 </html>
