@@ -1,21 +1,17 @@
-/* ==========================================================
-   DRIVE ZONE - about.css  (About page only, no JavaScript)
-   Header, footer, buttons, colours and image placeholders
-   come from index.css, so load index.css first.
-   ========================================================== */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
-/* current page in the menu */
 .nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 8px; text-decoration-thickness: 2px; }
 
-/* ---------- Hero ---------- */
+/*  Hero ---------- */
 .page-hero {
     position: relative;
     min-height: 480px;
     padding: 70px 0;
 
-    /* HERO BACKGROUND: to add a photo, replace the gradient line with
-       url("images/about-hero-bg.jpg") center / cover no-repeat;
-       and keep the dark overlay line above it so the text stays readable. */
     background:
         linear-gradient(rgba(10,6,3,.55), rgba(10,6,3,.55)),
         linear-gradient(135deg, #1b0e07, #2e1305 50%, #120905);
@@ -30,7 +26,7 @@
 .page-hero .hero-card h1 { margin: 12px 0 26px; }
 .page-hero .hero-poster { width: 380px; height: 480px; margin-top: 0; flex-shrink: 0; }
 
-/* ---------- Shared blocks ---------- */
+/*  Shared blocks ---------- */
 .about-block { padding: 90px 0; }
 
 .split {
@@ -60,14 +56,14 @@
 }
 .split-text .eyebrow { margin-bottom: 0; color: var(--accent-2); font-size: 13px; }
 
-/* Image slots */
+
 .media {
     aspect-ratio: 3 / 2;
     border-radius: var(--radius);
     box-shadow: 0 24px 50px rgba(0,0,0,.45);
 }
 
-/* Grey band (same grey as "Shop by Category" on the home page) */
+
 .story { background: var(--grey); padding: 90px 0; }
 
 /* ---------- Why DriveZone ---------- */
@@ -129,9 +125,8 @@
 .cta-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
 .cta-actions .pill { min-width: 160px; padding: 13px 28px; }
 
-/* ==========================================================
-   RESPONSIVE
-   ========================================================== */
+/* RESPONSIVE FOR ALL DEVICES */
+
 @media (max-width: 1100px) {
     .split { gap: 44px; }
     .why-grid { grid-template-columns: 1fr; }
@@ -157,3 +152,103 @@
     .cta { min-height: 360px; }
     .cta-actions .pill { width: 100%; }
 }
+
+@keyframes about-reveal-left{
+    from{opacity: 0; translate: -70px 0; clip-path: inset(0 100% 0 0 round 24px);}
+    to {opacity: 1; translate: 0 0; clip-path: inset(0 0 0 0 round 24px);}
+}
+
+@keyframes about-reveal-right{
+    from{ opacity: 0; translate: 70px 0;  clip-path: inset(0 0 0 100% round 24px); }
+    to  { opacity: 1; translate: 0 0;     clip-path: inset(0 0 0 0 round 24px); }
+}
+
+@keyframes about-zoom{
+    from{ scale: 1.25; }
+    to  { scale: 1; }
+}
+
+@keyframes about-float{
+    0%, 100%{ translate: 0 0; }
+    50%     { translate: 0 -10px; }
+}
+
+@keyframes about-glow{
+    0%, 100%{ box-shadow: 0 20px 45px rgba(0,0,0,.55), 0 0 0 rgba(247,103,7,0); }
+    50%     { box-shadow: 0 20px 45px rgba(0,0,0,.55), 0 0 40px rgba(247,103,7,.35); }
+}
+
+/* shared frames */
+.page-hero .ph,
+.media{
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+.page-hero .ph img,
+.media img{
+    transition: scale .8s ease;
+}
+
+.page-hero .hero-poster{
+    animation:
+        about-reveal-right 1.1s cubic-bezier(.22,1,.36,1) .3s both,
+        about-glow 5s ease-in-out 1.6s infinite;
+}
+
+.page-hero .hero-poster img{
+    animation:
+        about-zoom 1.6s ease-out .3s both,
+        about-float 7s ease-in-out 2s infinite;
+}
+
+.media{
+    animation: about-reveal-left 1s cubic-bezier(.22,1,.36,1) both;
+}
+
+.media img{
+    animation: about-zoom 1.4s ease-out both;
+}
+
+.story:nth-of-type(even) .media{
+    animation-name: about-reveal-right;
+}
+
+@supports (animation-timeline: view()){
+
+    .media{
+        animation-timeline: view();
+        animation-timing-function: linear;
+        animation-range: entry 5% entry 55%;
+    }
+
+    .media img{
+        animation-timeline: view();
+        animation-timing-function: linear;
+        animation-range: entry 0% cover 50%;
+    }
+}
+
+.media:hover img,
+.page-hero .hero-poster:hover img{
+    scale: 1.06;
+}
+
+.media{
+    transition: box-shadow .4s, translate .4s;
+}
+.media:hover{
+    box-shadow: 0 24px 50px rgba(247,103,7,.25);
+}
+
+@media (prefers-reduced-motion: reduce){
+    .page-hero .hero-poster,
+    .page-hero .hero-poster img,
+    .media,
+    .media img{
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
