@@ -74,7 +74,7 @@ img{
 
 .ph img { position: absolute; inset: 0; }
 .ph:not(:has(img))::after {
-    content: "Add image";
+    content: "";
     position: absolute; inset: 0;
     display: grid; place-items: center;
     color: #4a4a4a;
@@ -285,7 +285,7 @@ img{
 
      background:
         linear-gradient(rgba(10,6,3,.55), rgba(10,6,3,.55)),
-        url("https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D") center / cover no-repeat,
+        url("Drive\ Zone_\ Orange\ Velocity.png") center / cover no-repeat,
         #120905;
 }
 
@@ -486,6 +486,102 @@ h2{
 .cat-card:hover .ph{
     transform: translate(-6px);
 }
+
+/* PROMO BANNER----- */
+
+.promo-banner {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    place-items: center;
+    min-height: clamp(320px, 38vw, 480px);
+    margin: 20px 0 50px;
+    padding: 70px 5%;
+    overflow: hidden;
+    text-align: center;
+    background: #0b0b0b;
+}
+
+.promo-banner-media{
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: linear-gradient(
+        120deg,
+        #120905, 
+        #2a1206 50%,
+        #0b0b0b
+    );
+}
+
+.promo-banner-media img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: promo-zoom 18s ease-in-out infinite alternate;
+}
+
+.promo-banner::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(5, 5, 5, .6);
+}
+
+.promo-banner-content{
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+}
+
+.promo-banner-kicker {
+    margin-bottom: 10px;
+    color: var(--accent-2, #f76707);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+}
+
+.promo-banner h2{
+    font-size: clamp(
+        36px,
+        6vw,
+        64px
+        );
+        font-weight: 800;
+        line-height: 1.1;
+        text-transform: uppercase;
+}
+
+.promo-banner-text {
+    margin: 8px 0 28px;
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 500;
+}
+
+.promo-banner-content > * {
+    animation: promo-rise .8s ease both;
+}
+
+.promo-banner-content > :nth-child(2) {
+    animation-delay: .12s;
+}
+
+.promo-banner-content > :nth-child(3) {
+    animation-delay: .24s;
+}
+
+.promo-banner-btn {
+    padding: 13px 38px;
+}
+
+.promo-banner-content > :nth-child(4) {
+    animation: promo-rise .8s ease .36s both, 
+    promo-pulse 2.4s ease-out 1.4s infinite;
+}
+
 
 /* DEALS CLASS----------- */
 
@@ -1015,12 +1111,30 @@ outline-offset: 2px;
     grid-column: 1;
     justify-self: center;
 }
+
+.promo-banner {
+    min-height: 340px;
+    padding: 56px 6%;
+}
+
+.promo-banner-btn {
+    width: 100%;
+    max-width: 320px;
+}
 }
 
 /* REDUCED MOTION MEDIA ------------- */
 
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; 
+    }
+
+    .promo-banner *, .promo-banner::before {
+        animation: none !important;
+    }
+
+    .promo-banner::before {
+        display: none;
     }
 }
 
@@ -1241,6 +1355,11 @@ outline-offset: 2px;
         animation: fade-up linear both;
         animation-timeline: view();
         animation-range: entry 0% entry 35%;
+    }
+    .promo-banner-content > :nth-child(-n+3) {
+        animation: promo-rise linear both;
+        animation-timeline: view();
+        animation-range: entry 5% entry 60%;
     }
 }
 
